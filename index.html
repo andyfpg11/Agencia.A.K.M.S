@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia de Viajes A.K.M.S - Disneyland París</title>
+  
+  <!-- AQUÍ ES DONDE VINCULAS EL ARCHIVO CSS EXTERNO -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- O si quieres hacer cambios personalizados, agrega CSS adicional -->
+  <style>
+    /* Ejemplo de cambios personalizados */
+    header h1 {
+      font-size: 5rem; /* Cambié de 4rem a 5rem para hacerlo más grande */
+      color: #ff1744; /* Agregué color rojo específico */
+    }
+    
+    .section {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb); /* Cambié el fondo de las secciones */
+    }
+    
+    nav {
+      background: rgba(25, 118, 210, 0.95); /* Cambié el color de la navegación */
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>✨ Agencia de Viajes A.K.M.S ✨</h1>
+  <p>🏰 Professional Itinerary – Disneyland París en 3 días 🎢</p>
+</header>
+
+<nav>
+  <a href="#dia1">🗓 Day 1</a>
+  <a href="#dia2">🎬 Day 2</a>
+  <a href="#dia3">🛍 Day 3</a>
+  <a href="#tips">💡 Tips</a>
+  <a href="#galeria">📸 Gallery</a>
+  <a href="#servicios">🎯 Services</a>
+</nav>
+
+<div class="container">
+  <section id="dia1" class="section day-section fade-in">
+    <h2>🏰 Day 1 – Disneyland Park (Classic Disney Magic)</h2>
+    <img src="https://www.viajaraparis.com/wp-content/uploads/2019/05/disneyland-paris-2272907_960_720.jpg" alt="Disneyland Park">
+    
+    <div class="time-section">
+      <h3>⏰ Mañana</h3>
+      <p><strong>Llegada temprana antes de la apertura para evitar multitudes.</strong></p>
+      <p><strong>Comenzar en Fantasyland:</strong></p>
+      <ul class="attraction-list">
+        <li>🧚‍♀️ Peter Pan's Flight</li>
+        <li>🌍 "It's a Small World"</li>
+        <li>🐰 Alice's Curious Labyrinth</li>
+        <li>🐭 Encuentro con Mickey & Minnie en Meet Mickey Mouse Theater</li>
+      </ul>
+      <div class="restaurant-highlight">
+        ☕ Desayuno en Cable Car Bake Shop (croissant o café)
+      </div>
+    </div>
+
+    <div class="time-section">
+      <h3>🕛 Mediodía</h3>
+      <p><strong>Dirigirse a Adventureland y Frontierland:</strong></p>
+      <ul class="attraction-list">
+        <li>🏴‍☠️ Pirates of the Caribbean</li>
+        <li>⛰️ Big Thunder Mountain (usar Disney Premier Access si es posible)</li>
+        <li>🏛️ Indiana Jones and the Temple of Peril</li>
+      </ul>
+      <div class="restaurant-highlight">
+        🍽️ Almuerzo en Captain Jack's Restaurant (dentro de Pirates of the Caribbean)
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p>✨ © 2025 Agencia de Viajes A.K.M.S | Creando momentos mágicos desde 1995 ✨</p>
+  <p>🌟 Todos los derechos reservados | Licencia oficial Disney Travel Partner 🌟</p>
+</footer>
+
+<script>
+  // JavaScript permanece igual
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+  });
+</script>
+
+</body>
+</html>
